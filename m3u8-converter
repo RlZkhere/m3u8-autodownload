@@ -1,0 +1,8 @@
+#!/bin/bash
+echo -e "Insert the link\n"
+read 
+LINK=($REPLY)
+echo -e "Type the file name \n"
+read 
+FILE=($REPLY)
+vlc -vvv $LINK --sout file/ts:$FILE
